@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ControlledInputs } from "../src/assets/Form";
-import {Memo} from "../src/assets/Memo";
+import { Memo } from "../src/assets/Memo";
+import { Ref } from "./assets/Ref";
 
 function App() {
   //  State hook
@@ -31,8 +32,9 @@ function App() {
       <button onClick={incrementCount}>+</button>
       </div>
       <ControlledInputs />
-      <Memo/>
-      </>
+      <Memo />
+    <Ref/>
+    </>
     )
 }
 
