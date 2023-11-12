@@ -32,16 +32,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-span{
+/*span{
   font-size: 8rem;
-}
+}*/
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
+/*button {
   border-radius: 8px;
   border: 15px solid black;
   
@@ -53,7 +53,7 @@ button {
   transition: border-color 0.25s;
   width: 20vw;
   height: 20vh;
-}
+}*/
 button:hover {
   border-color: #a7a8ab;
 }

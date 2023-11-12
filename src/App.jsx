@@ -1,4 +1,5 @@
-import React, {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import  ControlledInputs  from "../src/assets/Form";
 
 function App() {
   //  State hook
@@ -18,7 +19,8 @@ function App() {
     setWindowWidth(window.innerWidth)
   }
   useEffect(()=>{window.addEventListener('resize',handleResize)},[])
-return(
+  return (
+  <>
   <div className="container">
     <h1>Window width : {window.innerWidth } pixel</h1>
     
@@ -26,7 +28,9 @@ return(
     <span>{count}</span>
     <span>{theme}</span>
       <button onClick={incrementCount}>+</button>
-    </div>
+      </div>
+      <ControlledInputs/>
+      </>
     )
 }
 
