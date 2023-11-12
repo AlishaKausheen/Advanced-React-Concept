@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import  ControlledInputs  from "../src/assets/Form";
+import { ControlledInputs } from "../src/assets/Form";
+import {Memo} from "../src/assets/Memo";
 
 function App() {
   //  State hook
@@ -29,7 +30,8 @@ function App() {
     <span>{theme}</span>
       <button onClick={incrementCount}>+</button>
       </div>
-      <ControlledInputs/>
+      <ControlledInputs />
+      <Memo/>
       </>
     )
 }
