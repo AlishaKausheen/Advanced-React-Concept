@@ -1,13 +1,17 @@
 
 import React, { useState, useMemo } from "react";
+// use Memo stands for memorization
 export const Memo = () => {
     const [number, setNumber] = useState(0);
     const [dark, setDark] = useState(false);
-    const doubleNumber = slowFunction(number);
+    // slow function will run only when the number changes beauty of memo hook
+    const doubleNumber = useMemo(() => {
+        return slowFunction(number)
+    },[number]);
     const themeStyle = {
-        backgroundColor: dark ? 'black' : 'white',
-        color:dark?'white':'black'
-    }
+            backgroundColor: dark ? 'black' : 'white',
+            color: dark ? 'white' : 'black'
+        }
     return (
         <div>
             <input type="number" value={number} onChange={e=>{
