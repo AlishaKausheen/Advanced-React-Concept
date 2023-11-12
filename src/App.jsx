@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState , useEffect} from "react";
 
 function App() {
+  //  State hook
   const [count, setCount] = useState(4);
   const [theme, setTheme] = useState('blue');
   function decrementCount() {
@@ -11,8 +12,15 @@ function App() {
     setCount(prevCount => prevCount + 1);
     setTheme('green');
   }
+  //Effect hook to resize Window
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+  useEffect(()=>{window.addEventListener('resize',handleResize)},[])
 return(
-    <div className="container">
+  <div className="container">
+    <h1>Window width : {window.innerWidth } pixel</h1>
     
       <button onClick={decrementCount}>-</button>
     <span>{count}</span>
