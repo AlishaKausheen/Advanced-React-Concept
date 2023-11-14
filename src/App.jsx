@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ControlledInputs } from "../src/assets/Form";
 import { Memo } from "../src/assets/Memo";
 import { Ref } from "./assets/Ref";
+import { Context } from "./assets/Context";
 
 function App() {
   //  State hook
@@ -33,7 +34,8 @@ function App() {
       </div>
       <ControlledInputs />
       <Memo />
-    <Ref/>
+      <Ref />
+      <Context/>
     </>
     )
 }
