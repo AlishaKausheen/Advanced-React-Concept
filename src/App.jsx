@@ -5,6 +5,7 @@ import { Ref } from "./assets/Ref";
 import { Context } from "./assets/Context";
 import { Reducer } from "./assets/Reducer";
 
+
 function App() {
   //  State hook
   const [count, setCount] = useState(4);
@@ -37,7 +38,8 @@ function App() {
       <Memo />
       <Ref />
       <Context />
-      <Reducer/>
+      <Reducer />
+      
     </>
     )
 }
