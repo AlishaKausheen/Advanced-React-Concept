@@ -3,6 +3,7 @@ import { ControlledInputs } from "../src/assets/Form";
 import { Memo } from "../src/assets/Memo";
 import { Ref } from "./assets/Ref";
 import { Context } from "./assets/Context";
+import { Reducer } from "./assets/Reducer";
 
 function App() {
   //  State hook
@@ -35,7 +36,8 @@ function App() {
       <ControlledInputs />
       <Memo />
       <Ref />
-      <Context/>
+      <Context />
+      <Reducer/>
     </>
     )
 }
