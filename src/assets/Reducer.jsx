@@ -2,13 +2,17 @@
 // it gives you set action that you can form on your state to convert 
 //your new state to a new version of the state based on the action that you sended
 import React, { useReducer } from "react";
+const ACTION = {
+    INCREMENT: 'increment',
+    DECREMENT : 'decrement'
+}
 function reducer(state, action) {
     switch (action.type) {
- case  'increment' :
+ case  ACTION.INCREMENT :
         return {
         count: state.count + 1
             }
-        case 'decrement':
+        case ACTION.DECREMENT:
             return {
                 count: state.count-1
             }
@@ -19,10 +23,10 @@ function reducer(state, action) {
 export const Reducer = () => {
 const [state,dispatch] = useReducer(reducer,{count:0})
     function increment() {
-        dispatch({type : 'increment'});
+        dispatch({type : ACTION.INCREMENT});
     }
     function decrement() {
-        dispatch({ type:'decrement'})        
+        dispatch({ type:ACTION.DECREMENT})        
     }
     return (
         <>
